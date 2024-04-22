@@ -8,6 +8,7 @@ Este repositório contém as respostas para o teste de SQL da vaga, incluindo co
 
 ##Observações
 - As consultas foram elaboradas utilizando como base a seguinte esquema de banco de dados:
+
     CREATE TABLE Employees (
       EmployeeID INT PRIMARY KEY,
       FirstName VARCHAR(50),
