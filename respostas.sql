@@ -89,7 +89,7 @@ set Salary =
             from Assignments a 
             join Projects p on a.ProjectID = p.ProjectID
             where a.EmployeeID = e.EmployeeID
-            and timestampdiff(month, p.StartDate, p.EndDate) > 9  -- Mais de 9 meses (considerando 30 dias por mês)
-        ) then Salary  -- Não atualiza o salário se estiver em projeto com mais de 9 meses
-        else Salary * 1.05  -- Aumento de 5% para os demais funcionários
+            and datediff(p.EndDate, p.StartDate) > 270 
+        ) then Salary  
+        else Salary * 1.05  
     end;
